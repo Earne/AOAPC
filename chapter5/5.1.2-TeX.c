@@ -16,10 +16,9 @@
  * =====================================================================================
  */
 
-
 #include <errno.h>
-#include <math.h>  
-#include <stdio.h> 
+#include <math.h>
+#include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 
@@ -29,27 +28,24 @@
  *  Description:  main function
  * =====================================================================================
  */
-	int
-main ( int argc, char *argv[] )
+int main(int argc, char *argv[])
 {
 
 #ifndef  ONLINE_JUDGE
-    freopen("5.1.2-TeX.input", "r", stdin);
-#else      /* -----  not ONLINE_JUDGE  ----- */
-        
-#endif     /* -----  not ONLINE_JUDGE  ----- */
-    int flag = 1, c;
-    while ((c = getchar()) != EOF){
+	freopen("5.1.2-TeX.input", "r", stdin);
+#else							/* -----  not ONLINE_JUDGE  ----- */
 
-        if ( c == '"' ) {
-            printf ( "%s", flag ? "``" : "''" );
-            flag = !flag;
-        }
-        else {
-            printf ( "%c", c );
-        }
-    }
+#endif							/* -----  not ONLINE_JUDGE  ----- */
+	int flag = 1, c;
+	while ((c = getchar()) != EOF) {
+
+		if (c == '"') {
+			printf("%s", flag ? "``" : "''");
+			flag = !flag;
+		} else {
+			printf("%c", c);
+		}
+	}
 
 	return EXIT_SUCCESS;
-}		/* ----------  end of function main  ---------- */
-
+}								/* ----------  end of function main  ---------- */
